@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Create ticket by your own — GJT Globe Tech Support</title>
+
+  <!-- Oswald font -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent1: #3C64B1;
+      --accent2: #6CC1FF;
+      --card: #ffffff;
+      --muted: #666;
+    }
+    html,body{height:100%;margin:0;background:var(--card);font-family:'Oswald', Arial, sans-serif;color:#111;}
+    .page{
+      max-width:1100px;
+      margin:32px auto;
+      padding:30px;
+    }
+    .hero{
+      background: linear-gradient(90deg,var(--accent1), #6A9BFF 70%);
+      color:white;
+      border-radius:14px;
+      padding:28px;
+      box-shadow:0 10px 30px rgba(50,70,120,0.12);
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .hero h1{margin:0;font-size:1.8rem;font-weight:700;letter-spacing:0.5px;}
+    .hero p{margin:6px 0 0;font-weight:300;color:rgba(255,255,255,0.95)}
+    .hero .cta{
+      background:rgba(255,255,255,0.12);
+      padding:10px 16px;border-radius:8px;
+      font-weight:700;
+      text-decoration:none;color:#fff;
+    }
+
+    .card{
+      margin-top:18px;
+      background: linear-gradient(180deg,#ffffff,#f6fbff);
+      padding:22px;
+      border-radius:12px;
+      box-shadow:0 6px 20px rgba(98,120,180,0.06);
+    }
+    .intro{
+      margin-bottom:12px;
+      color:var(--muted);
+      font-weight:300;
+    }
+
+    /* Make Zoho form wider and colorful */
+    #zohoSupportWebToCase { display:block; width:100%; }
+    .zsFormClass{
+      width:100%;
+      max-width:100%;
+      background:transparent;
+      border-collapse:collapse;
+    }
+    .zsFormClass td { padding:10px 8px; vertical-align:top; }
+    .zsFormClass input[type="text"],
+    .zsFormClass input[type="email"],
+    .zsFormClass textarea,
+    .zsFormClass select {
+      width:100%;
+      padding:10px;
+      border:1px solid #e0e6f3;
+      border-radius:8px;
+      box-sizing:border-box;
+      font-family:'Oswald', Arial, sans-serif;
+      font-weight:300;
+    }
+    .zsFormClass textarea { min-height:140px; resize:vertical; }
+    .field-label { font-weight:700; color:#1f3866; margin-bottom:6px; display:block; }
+    .form-row { display:flex; gap:18px; align-items:flex-start; }
+    .form-col{flex:1;}
+    .form-actions { text-align:center; padding-top:10px; }
+    .btn {
+      display:inline-block;
+      background: var(--accent1);
+      color:#fff;
+      padding:12px 26px;
+      border-radius:10px;
+      border:none;
+      font-weight:700;
+      cursor:pointer;
+      font-family:'Oswald', Arial, sans-serif;
+    }
+    .btn.secondary { background: #e6f2ff; color:var(--accent1); font-weight:700; }
+
+    .small-muted{font-size:13px;color:#666;margin-top:8px;}
+
+    /* responsiveness */
+    @media (max-width:900px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .form-row{flex-direction:column}
+    }
+
+    /* remove Zoho toolbar text area style default */
+    .wb_FtCon{display:flex; justify-content:flex-end; align-items:center; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="hero">
+      <div>
+        <h1>Create ticket by your own</h1>
+        <p>Fill in the form below and our support team will respond promptly.</p>
+      </div>
+      <div>
+        <!-- If you want a direct link to open the hosted page in a new tab (useful for Google Sites) -->
+        <a class="cta" href="#" onclick="window.open(window.location.href,'_blank');return false;">Open this page in a new tab</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="intro">Create a ticket and attach screenshots or files if needed. Captcha is required before submitting.</p>
+
+      <!-- BEGIN Zoho embed (cleaned & sized) -->
+      <div id="zohoSupportWebToCase" align="center">
+        <!-- form target _top helps break out of frames on submit -->
+        <form name="zsWebToCase_1169909000000365612" id="zsWebToCase_1169909000000365612"
+              action="https://desk.zoho.com/support/WebToCase"
+              method="POST" target="_top"
+              onSubmit="return zsValidateMandatoryFields()" enctype="multipart/form-data">
+
+          <!-- Hidden tokens from your embed -->
+          <input type="hidden" name="xnQsjsdp" value="edbsn5644849d537b6929f9b9bb17ebfe45d4"/>
+          <input type="hidden" name="xmIwtLD" value="edbsnae556aa0c59a42b88ffa1302d12281135a72bf728654d14a144ef5f89b6c1be1"/>
+          <input type="hidden" name="xJdfEaS" value=""/>
+          <input type="hidden" name="actionType" value="Q2FzZXM="/>
+          <input type="hidden" id="property(module)" value="Cases"/>
+          <input type="hidden" id="dependent_field_values_Cases" value='{"JSON_VALUES":{},"JSON_SELECT_VALUES":{},"JSON_MAP_DEP_LABELS":[]}'>
+          <input type="hidden" name="returnURL" value="https://tech.gjtglobe.com/support"/>
+
+          <table border="0" cellspacing="0" class="zsFormClass" style="max-width:1000px;">
+            <tr>
+              <td colspan="2" style="padding-bottom:8px;">
+                <!-- title row (optional) -->
+              </td>
+            </tr>
+
+            <tr>
+              <td class="field-label" width="25%">First Name</td>
+              <td width="75%"><input type="text" maxlength="120" name="First Name" /></td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Last Name</td>
+              <td><input type="text" maxlength="120" name="Contact Name" class="manfieldbdr"/></td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Email</td>
+              <td><input type="email" maxlength="120" name="Email" class="manfieldbdr" required/></td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Phone</td>
+              <td><input type="text" maxlength="120" name="Phone" value=""/></td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Subject</td>
+              <td><input type="text" maxlength="255" name="Subject" value="" class="manfieldbdr" required/></td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Description</td>
+              <td><textarea name="Description" maxlength="3000"></textarea></td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Attachment</td>
+              <td>
+                <span id="zsBrowseAttachment" style="color:#0b76d1;cursor:pointer;margin-bottom:6px;display:inline-block;">Attach files</span>
+                <input class="wtcuploadinput" type="file" name="attachment_1" id="zsattachment_1" style="display:block" />
+                <input class="wtcuploadinput" type="file" name="attachment_2" id="zsattachment_2" style="display:none" />
+                <input class="wtcuploadinput" type="file" name="attachment_3" id="zsattachment_3" style="display:none" />
+                <div id="zsFileBrowseAttachments"></div>
+                <div class="small-muted">Each file up to 20MB. Max 5 files.</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="field-label">Captcha</td>
+              <td>
+                <div id="zsCaptchaLoading"><strong>Loading captcha…</strong></div>
+                <div id="zsCaptcha" style="display:none;">
+                  <img src="#" id="zsCaptchaUrl" name="zsCaptchaImage" alt="captcha image">
+                  <a href="javascript:;" onclick="zsRegenerateCaptcha();return false;" style="margin-left:12px;color:#0b76d1;">Refresh</a>
+                </div>
+                <div style="margin-top:8px;">
+                  <input type="text" name="zsWebFormCaptchaWord" style="width:240px;padding:8px;border-radius:6px;border:1px solid #ddd;">
+                  <input type="hidden" name="zsCaptchaSrc" value="">
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" style="text-align:center;padding-top:12px;">
+                <input type="submit" id="zsSubmitButton_1169909000000365612" class="btn" value="Submit">
+                &nbsp;&nbsp;
+                <input type="button" class="btn secondary" value="Reset" onclick="zsResetWebForm('1169909000000365612')">
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="2" style="padding-top:10px;text-align:right;">
+                <div class="wb_FtCon">
+                  <span style="color:#999;margin-right:8px;font-weight:300;">powered by</span>
+                  <a target="_blank" rel="noopener noreferrer" href="https://zoho.com/desk"><img style="height:18px" src="https://d1ydxa2xvtn0b5.cloudfront.net/app/images/portalLogo.de847024ebc0131731a3.png" alt="Zoho Desk"></a>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+        </form>
+      </div>
+      <!-- END Zoho embed -->
+
+    </div>
+  </div>
+
+  <!-- Zoho's supporting JS (from original embed) -->
+  <script src="https://d17nz991552y2g.cloudfront.net/app/js/jqueryandencoder.ef05974972bf3bca1b87.js"></script>
+
+  <script>
+    /* --- Minimal snippets from original embed that are necessary for captcha & validation --- */
+    // (I included only the functions required so page remains light. If you prefer the full original script,
+    // paste the entire Zoho embed script you already had into the head.)
+    // For reliability we will call the Zoho captcha endpoint exactly as their widget expects.
+    function zsShowCaptcha(){ document.getElementById('zsCaptchaLoading').style.display = 'none'; document.getElementById('zsCaptcha').style.display = 'block'; }
+    function zsRegenerateCaptcha(){
+      var webFormxhr = new XMLHttpRequest();
+      webFormxhr.open('GET','https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_=' + new Date().getTime(),true);
+      webFormxhr.onreadystatechange = function () {
+        if(webFormxhr.readyState === 4) {
+          if(webFormxhr.status === 200){
+            try{
+              var response = JSON.parse(webFormxhr.responseText || '{}');
+              var img = document.getElementById('zsCaptchaUrl');
+              if(response && response.captchaUrl){
+                img.src = response.captchaUrl;
+                // store digest so Zoho can verify server-side
+                var hiddenDigest = document.getElementsByName('xJdfEaS')[0];
+                if(hiddenDigest) hiddenDigest.value = response.captchaDigest || '';
+                zsShowCaptcha();
+              } else {
+                document.getElementById('zsCaptchaLoading').innerText = 'Captcha unavailable';
+              }
+            }catch(e){
+              console.error('captcha parse error', e);
+              document.getElementById('zsCaptchaLoading').innerText = 'Captcha error';
+            }
+          } else {
+            console.error('captcha xhr status', webFormxhr.status);
+            document.getElementById('zsCaptchaLoading').innerText = 'Captcha load failed';
+          }
+        }
+      };
+      webFormxhr.send();
+    }
+
+    // Basic mandatory check (keeps original field names)
+    function zsValidateMandatoryFields(){
+      var form = document.forms['zsWebToCase_1169909000000365612'];
+      var last = form['Contact Name'];
+      var email = form['Email'];
+      var subject = form['Subject'];
+      if(!last || !last.value.trim()){ alert('Last Name cannot be empty'); last.focus(); return false; }
+      if(!email || !email.value.trim()){ alert('Email cannot be empty'); email.focus(); return false; }
+      if(!subject || !subject.value.trim()){ alert('Subject cannot be empty'); subject.focus(); return false; }
+      var captcha = form['zsWebFormCaptchaWord'];
+      if(!captcha || !captcha.value.trim()){ alert('Please enter the captcha code.'); captcha && captcha.focus(); return false; }
+      // disable button (prevents double submit)
+      document.getElementById('zsSubmitButton_1169909000000365612').setAttribute('disabled','disabled');
+      return true;
+    }
+
+    function zsResetWebForm(webFormId){
+      var f = document.forms['zsWebToCase_' + webFormId];
+      if(f) f.reset();
+      var btn = document.getElementById('zsSubmitButton_1169909000000365612');
+      if(btn) btn.removeAttribute('disabled');
+      // reload captcha fresh
+      zsRegenerateCaptcha();
+    }
+
+    // On page load, request captcha
+    window.addEventListener('load', function(){
+      try { zsRegenerateCaptcha(); } catch(e){ console.warn('captcha init failed', e); }
+    });
+  </script>
+</body>
+</html>
