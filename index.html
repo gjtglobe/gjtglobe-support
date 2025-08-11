@@ -1,162 +1,270 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Create Ticket — GJT Globe Tech Support</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Create Ticket — GJT Globe Tech Support</title>
 
-  <!-- Oswald font -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+<!-- Oswald font -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
     :root {
-      --accent1: #3C64B1;
-      --accent2: #27DDF5;
-      --accent3: #FF6F61;
-      --bg-gradient: linear-gradient(120deg, #d9e4ff, #f0f9ff);
+        --primary: #0056b3;
+        --secondary: #27DDF5;
+        --highlight: #ff6b6b;
     }
     html, body {
-      height: 100%;
-      margin: 0;
-      background: var(--bg-gradient);
-      font-family: 'Oswald', Arial, sans-serif;
-      color: #111;
+        margin: 0;
+        background: #fff;
+        font-family: 'Oswald', Arial, sans-serif;
+        color: #111;
     }
     .page {
-      max-width: 1100px;
-      margin: 32px auto;
-      padding: 30px;
+        max-width: 1100px;
+        margin: 32px auto;
+        padding: 20px;
     }
     .hero {
-      background: linear-gradient(90deg, var(--accent1), var(--accent2) 70%);
-      color: white;
-      border-radius: 14px;
-      padding: 28px;
-      box-shadow: 0 10px 30px rgba(50, 70, 120, 0.2);
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      justify-content: space-between;
+        background: var(--primary);
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     }
     .hero h1 {
-      margin: 0;
-      font-size: 1.9rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 700;
     }
     .hero p {
-      margin: 6px 0 0;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.95);
+        margin: 4px 0 0;
+        font-weight: 300;
+        color: rgba(255,255,255,0.95);
     }
-    .hero .cta {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      color: #fff;
-      transition: 0.2s;
+    .cta {
+        background: var(--secondary);
+        padding: 10px 16px;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #003;
+        font-weight: 700;
+        transition: background 0.2s;
     }
-    .hero .cta:hover {
-      background: rgba(255, 255, 255, 0.3);
+    .cta:hover {
+        background: #14c5e6;
     }
-
     .card {
-      margin-top: 18px;
-      background: linear-gradient(180deg, #ffffff, #f9fcff);
-      padding: 22px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        margin-top: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     }
     .intro {
-      margin-bottom: 12px;
-      color: #555;
-      font-weight: 300;
+        margin-bottom: 12px;
+        color: #555;
+        font-weight: 300;
     }
 
-    /* Zoho form styling */
-    .zsFormClass td { padding: 10px 8px; vertical-align: top; }
+    /* Form styling */
+    .zsFormClass td {
+        padding: 8px;
+        vertical-align: top;
+    }
     .zsFormClass input[type="text"],
     .zsFormClass input[type="email"],
     .zsFormClass textarea,
     .zsFormClass select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-sizing: border-box;
-      font-family: 'Oswald', Arial, sans-serif;
-      font-weight: 300;
-      transition: all 0.2s ease;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: 'Oswald', Arial, sans-serif;
+        font-weight: 300;
+        transition: all 0.2s ease;
     }
     .zsFormClass input:focus,
     .zsFormClass textarea:focus,
     .zsFormClass select:focus {
-      border-color: var(--accent2);
-      box-shadow: 0 0 6px rgba(39, 221, 245, 0.4);
-      outline: none;
+        border-color: var(--secondary);
+        box-shadow: 0 0 5px rgba(39, 221, 245, 0.3);
+        outline: none;
     }
-    .zsFormClass textarea { min-height: 140px; resize: vertical; }
-    .field-label { font-weight: 700; color: var(--accent1); margin-bottom: 6px; display: block; }
+    .zsFormClass textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+    .field-label {
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 4px;
+        display: block;
+        white-space: nowrap; /* Prevent wrapping */
+    }
 
     /* Buttons */
     .btn {
-      display: inline-block;
-      background: var(--accent1);
-      color: #fff;
-      padding: 12px 26px;
-      border-radius: 10px;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-      font-family: 'Oswald', Arial, sans-serif;
-      transition: all 0.2s ease;
+        background: var(--primary);
+        color: white;
+        padding: 10px 22px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-family: 'Oswald', Arial, sans-serif;
+        font-weight: 700;
+        transition: background 0.2s ease;
     }
     .btn:hover {
-      background: var(--accent3);
-      transform: scale(1.03);
+        background: var(--highlight);
     }
     .btn.secondary {
-      background: var(--accent2);
-      color: #003;
+        background: var(--secondary);
+        color: #003;
     }
 
-    .small-muted { font-size: 13px; color: #666; margin-top: 8px; }
+    .small-muted {
+        font-size: 13px;
+        color: #666;
+    }
 
-    /* Captcha */
+    /* Captcha image */
     #zsCaptcha img {
-      border-radius: 6px;
-      border: 1px solid #ccc;
+        border-radius: 4px;
+        border: 1px solid #ccc;
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
-      .hero { flex-direction: column; align-items: flex-start; }
+        .hero {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
-  </style>
+</style>
 </head>
 <body>
-  <div class="page">
+<div class="page">
     <div class="hero">
-      <div>
-        <h1>Create Ticket by Your Own</h1>
-        <p>Fill in the form below and our support team will respond promptly.</p>
-      </div>
-      <div>
+        <div>
+            <h1>Create Ticket by Your Own</h1>
+            <p>Fill in the form below and our support team will respond promptly.</p>
+        </div>
         <a class="cta" href="#" onclick="window.open(window.location.href,'_blank');return false;">Open in New Tab</a>
-      </div>
     </div>
 
     <div class="card">
-      <p class="intro">Create a ticket and attach screenshots or files if needed. Captcha is required before submitting.</p>
+        <p class="intro">Create a ticket and attach screenshots or files if needed. Captcha is required before submitting.</p>
 
-      <!-- Zoho form starts -->
-      <!-- Your existing Zoho form HTML here -->
-      <!-- Keep the same hidden inputs and captcha script -->
-      <!-- End Zoho form -->
+        <!-- Zoho Form -->
+        <div id="zohoSupportWebToCase">
+            <form name="zsWebToCase_1169909000000365612" id="zsWebToCase_1169909000000365612"
+                  action="https://desk.zoho.com/support/WebToCase"
+                  method="POST" target="_top"
+                  onSubmit="return zsValidateMandatoryFields()" enctype="multipart/form-data">
+
+                <!-- Hidden fields -->
+                <input type="hidden" name="xnQsjsdp" value="edbsn5644849d537b6929f9b9bb17ebfe45d4"/>
+                <input type="hidden" name="xmIwtLD" value="edbsnae556aa0c59a42b88ffa1302d12281135a72bf728654d14a144ef5f89b6c1be1"/>
+                <input type="hidden" name="xJdfEaS" value=""/>
+                <input type="hidden" name="actionType" value="Q2FzZXM="/>
+                <input type="hidden" id="property(module)" value="Cases"/>
+                <input type="hidden" name="returnURL" value="https://tech.gjtglobe.com/support"/>
+
+                <table class="zsFormClass" style="max-width:1000px;">
+                    <tr>
+                        <td class="field-label">First Name</td>
+                        <td><input type="text" maxlength="120" name="First Name" /></td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Last Name</td>
+                        <td><input type="text" maxlength="120" name="Contact Name" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Email</td>
+                        <td><input type="email" maxlength="120" name="Email" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Phone</td>
+                        <td><input type="text" maxlength="120" name="Phone" /></td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Subject</td>
+                        <td><input type="text" maxlength="255" name="Subject" required /></td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Description</td>
+                        <td><textarea name="Description" maxlength="3000"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Attachment</td>
+                        <td>
+                            <input type="file" name="attachment_1" />
+                            <div class="small-muted">Each file up to 20MB. Max 5 files.</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="field-label">Captcha</td>
+                        <td>
+                            <div id="zsCaptchaLoading"><strong>Loading captcha…</strong></div>
+                            <div id="zsCaptcha" style="display:none;">
+                                <img src="#" id="zsCaptchaUrl" alt="captcha image">
+                                <a href="javascript:;" onclick="zsRegenerateCaptcha();return false;" style="margin-left:12px;color:var(--primary);">Refresh</a>
+                            </div>
+                            <div style="margin-top:8px;">
+                                <input type="text" name="zsWebFormCaptchaWord" style="width:240px;">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align:center;padding-top:12px;">
+                            <input type="submit" class="btn" value="Submit">
+                            &nbsp;&nbsp;
+                            <input type="button" class="btn secondary" value="Reset" onclick="zsResetWebForm('1169909000000365612')">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </div>
-  </div>
+</div>
+
+<script>
+function zsShowCaptcha(){
+    document.getElementById('zsCaptchaLoading').style.display = 'none';
+    document.getElementById('zsCaptcha').style.display = 'block';
+}
+function zsRegenerateCaptcha(){
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET','https://desk.zoho.com/support/GenerateCaptcha?action=getNewCaptcha&_=' + new Date().getTime(),true);
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4 && xhr.status === 200){
+            var response = JSON.parse(xhr.responseText || '{}');
+            if(response.captchaUrl){
+                document.getElementById('zsCaptchaUrl').src = response.captchaUrl;
+                document.getElementsByName('xJdfEaS')[0].value = response.captchaDigest || '';
+                zsShowCaptcha();
+            }
+        }
+    };
+    xhr.send();
+}
+function zsValidateMandatoryFields(){
+    var f = document.forms['zsWebToCase_1169909000000365612'];
+    if(!f['Contact Name'].value.trim()){ alert('Last Name required'); return false; }
+    if(!f['Email'].value.trim()){ alert('Email required'); return false; }
+    if(!f['Subject'].value.trim()){ alert('Subject required'); return false; }
+    if(!f['zsWebFormCaptchaWord'].value.trim()){ alert('Enter captcha'); return false; }
+    return true;
+}
+function zsResetWebForm(id){
+    var f = document.forms['zsWebToCase_' + id];
+    if(f) f.reset();
+    zsRegenerateCaptcha();
+}
+window.addEventListener('load', zsRegenerateCaptcha);
+</script>
 </body>
 </html>
-
